@@ -1,0 +1,91 @@
+@font-face {
+    font-family: Bronxos;
+    src: url(fonts/BRONXOS-Regular.otf);
+}
+@font-face {
+    font-family: Degular;
+    src: url(fonts/Degular-Medium.otf);
+}
+@font-face {
+    font-family: Manrope;
+    src: url(fonts/Manrope.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: Manrope;
+    src: url(fonts/Manrope-ExtraLight.ttf);
+    font-weight: lighter;
+}
+
+body {
+    position: fixed;
+    margin: 0px !important;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/bg.png);
+    font-family: 'Degular';
+}
+
+.section {
+    position: absolute;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.section .cover {
+    padding: 0px 10vw 0px 10vw;
+    width: 80vw;
+}
+.section .info {
+    padding: 0px 10vw 0px 10vw;
+    width: 80vw;
+}
+
+.section .delay {
+    position: absolute;
+}
+
+.page-arrow {
+    z-index: 10;
+    cursor: pointer;
+    position: fixed;
+    height: 80px;
+    top: calc(50vh - 40px);
+}
+
+#nextpage {
+    right: 0;
+}
+#prevpage {
+    transform: rotate(180deg);
+    left: 0;
+    display: none;
+}
+
+#menu {
+    z-index: 2;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+    list-style: none;
+    cursor: pointer;
+    font-family: Manrope;
+    font-weight: lighter;
+}
+
+#menu li {
+    margin: 20px;
+    padding: 0px 10px 0px 10px;
+}
+
+#loading {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    background-color: black;
+    color: white;
+}
