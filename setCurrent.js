@@ -69,10 +69,10 @@ function setCurrent(targetIndex) {
             if (window[sections[currentSection].getAttribute('getin')])
                 window[sections[currentSection].getAttribute('getin')]();
 
+	    setArrows();
             animeSettings.easing = 'easeOutExpo';
             animeSettings.complete = function () {
                 scrollLock = false;
-                setArrows();
             };
             animeSettings.duration = animeSettings.duration * 2;
             animateMaterial(

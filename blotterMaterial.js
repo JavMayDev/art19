@@ -27,9 +27,12 @@ sections.forEach(function (section, i) {
             if (bg) fill = 'white';
             else fill = sectionsColors[i];
 
+	    var textSettings = { fill: fill }
+	    if(distor.parentElement.classList.contains('cover-title') )
+		textSettings.size = 70
             var text = new Blotter.Text(
                 distor.innerHTML,
-                Object.assign({ fill: fill }, distor.dataset)
+                Object.assign(textSettings, distor.dataset)
             );
             distor.innerHTML = '';
             var blotter = new Blotter(material, {
@@ -46,13 +49,13 @@ sections.forEach(function (section, i) {
         });
 });
 
-var prevY = 0;
-window.onmousemove = function (event) {
-    var mouseVel = Math.abs(event.clientY - prevY) / 50;
-    material.uniforms.uNoiseDistortAmplitude.value = mouseVel;
-    material.uniforms.uSineDistortAmplitude.value = mouseVel;
-    prevY = event.clientY;
-};
+// var prevY = 0;
+// window.onmousemove = function (event) {
+//     var mouseVel = Math.abs(event.clientY - prevY) / 50;
+//     material.uniforms.uNoiseDistortAmplitude.value = mouseVel;
+//     material.uniforms.uSineDistortAmplitude.value = mouseVel;
+//     prevY = event.clientY;
+// };
 
 function animateMaterial(materialSettings, duration) {
     Object.keys(materialSettings).forEach(function (uniform) {

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
     <title></title>
     <link rel="stylesheet" href="style.css">
 
@@ -12,6 +12,36 @@
     <script src="modules/rollingDistortMaterial.js"></script>
 </head>
 <body>
+    
+    <div id="header">
+	<a href="#"><img src="images/download_icon.png" alt=""> <span style="padding: 10px">DESACARGA EL INFORME</span></a>
+	<div class="push"></div>
+	<div>
+	    <span>comunicacion@article19.org</span>
+	    <div style="display: flex; flex-direction: row">
+		<div class="push"></div>
+		<div id="nav-icon">
+		    <span></span>
+		    <span></span>
+		    <span></span>
+		    <span></span>
+		</div>
+	    </div>
+	</div>
+    </div>
+
+    <div id="fullscreen-menu">
+	<ul>
+	    <li>Inicio</li>
+	    <li>01 / El control informativo</li>
+	    <li>02 / La desigualdad y la pandemia</li>
+	    <li>03 / Violencia contra la prensa</li>
+	    <li>04 / La regulacion del internet</li>
+	    <li>05 / El desmantelamiento de instituciones</li>
+	    <li>06 / La negaci&oacute;n del presente</li>
+	</ul>
+    </div>    
+
 
     <div id="loading" style="font-family: 'Bronxos'; font-size: 50px;">
 	<span style="left: 50%; top: 50%; transform: translate(-50%, -50%); position: absolute">Cargando...</span>
@@ -21,6 +51,7 @@
     include('sections/cover/cover.php');
     include('sections/sec00/sec00.php');
     include('sections/sec01/sec01.php');
+    include('sections/sec02/sec02.php');
     include('sections/sec03/sec03.php');
     include('sections/sec04/sec04.php');
     include('sections/sec05/sec05.php');
@@ -39,5 +70,6 @@
     <script src="setCurrent.js"></script>
     <script src="blotterMaterial.js"></script>
     <script src="changePage.js"></script>
+    <script src='nav.js'></script>
 </body>
 </html>

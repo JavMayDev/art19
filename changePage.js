@@ -16,7 +16,7 @@ function changePage(targetIndex) {
 
     if (
         currentPage == targetIndex ||
-        targetIndex > infoPages.length - 1 ||
+        targetIndex > infoPages.length ||
         targetIndex < 0
     )
         return;
@@ -30,10 +30,14 @@ function changePage(targetIndex) {
 
     currentPage = targetIndex;
 
+    // call getin function
+    if (targetIndex > 0 && window[infoPages[targetIndex - 1].getAttribute('getin')])
+        window[infoPages[targetIndex - 1].getAttribute('getin')]();
+
     // set page arrows visibility
     if (currentPage == 0) prevPageArrow.style.display = 'none';
     else prevPageArrow.style.display = 'block';
-    if (infoPages.length == 0 || currentPage == infoPages.length - 1)
+    if (infoPages.length == 0 || currentPage == infoPages.length)
         nextPageArrow.style.display = 'none';
     else nextPageArrow.style.display = 'block';
 }

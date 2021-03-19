@@ -1,0 +1,30 @@
+.cover h1 {
+    margin: none;
+}
+
+#cover-titles {
+    position: absolute;
+    top: 200px;
+}
+
+#cover-img-wrapper {
+    width: 700px;
+    right: 10vw;
+    position: absolute;
+    bottom: 0px;
+}
+
+#cover-img-wrapper * {
+    position: absolute;
+    bottom: 0px;
+}
+
+#cover-politic {
+    width: 468px;
+    left: 119px;
+}
+
+#cover-hands {
+    width: 100%; 
+    bottom: 400px;
+}
