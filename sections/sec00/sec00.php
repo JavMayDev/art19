@@ -1,4 +1,4 @@
-<div class="section" getin="initChart">
+<div class="section">
     <link rel="stylesheet" href="sections/sec00/sec00.css">
 
     <div class="cover">
@@ -16,5 +16,4 @@
 	</div>
     </div>
 
-    <script src="sections/sec00/init00cover.js"></script>
 </div>
