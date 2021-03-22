@@ -86,14 +86,14 @@ Con un total de 113 agresiones, el 16.3% de los ataques contra la prensa en 2020
 	    </div>
 	    <div class="chart">
 		<div style="width: 200px" id="sec03chartlabeldiv1" class="chartlabel"></div>
-		<div class="wrapper" style="height: 300px">
+		<div class="wrapper" style="height: 500px">
 		    <svg style="height: 100%; width: 100%" id="sec03chart1"></svg>
 		</div>
 	    </div>
 	</div>
     </div>
 
-    <div class="info">
+    <div class="info" getin="toggleBarsSec03Chart2">
 	<div class="center">
 	    <div class="columns">
 		<div>
@@ -107,11 +107,26 @@ Con un total de 113 agresiones, el 16.3% de los ataques contra la prensa en 2020
 		    </p>
 		</div>
 	    </div>
+	    <div class="chart">
+		<div style="width: 200px" id="sec03chartlabeldiv2" class="chartlabel"></div>
+		<div class="wrapper" style="height: 500px">
+		    <svg style="height: 100%; width: 100%" id="sec03chart2"></svg>
+		</div>
+	    </div>
 	</div>
     </div>
 
     <div class="info">
+	<style>
+	#embed-table #header {
+	    display: none;
+	}
+	#embed-table .above-table.svelte-ua6eqb {
+	    display: none;
+	}
+	</style>
 	<iframe 
+	    id="embed-table"
 	    src="https://datawrapper.dwcdn.net/fLWnU/31/" 
 	    frameborder="0"
 	    style="

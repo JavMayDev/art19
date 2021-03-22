@@ -37,11 +37,6 @@
 	    <img src="images/logo_black.png" alt="">
 	</div>
 
-	<!-- <div id="cover-img-wrapper"> -->
-	<!--     <img id="cover-hands" src="sections/cover/images/hands.png" alt=""> -->
-	<!--     <img id="cover-politic" src="sections/cover/images/political_guy1.png" alt=""> -->
-	<!-- </div> -->
-
 	<img style="left: 50vw" class="cover-img" src="images/art19cover.png" alt="">
 
 

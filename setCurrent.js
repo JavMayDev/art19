@@ -75,10 +75,6 @@ function setCurrent(targetIndex) {
 
         if (currentSection == targetIndex) {
             // init section
-	    console.log( 'target raised' )
-	    console.log( 'function string: ', sections[currentSection].getAttribute('getin') )
-	    console.log( 'window function:', window['initsec03'] )
-	    console.log( 'window function all together:', window[sections[currentSection].getAttribute('getin')] )
             if (window[sections[currentSection].getAttribute('getin')])
                 window[sections[currentSection].getAttribute('getin')]();
 

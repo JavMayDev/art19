@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.75">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
 
     <!-- modules -->
     <script src="modules/anime.min.js"></script>
@@ -12,6 +13,12 @@
     <script src="modules/rollingDistortMaterial.js"></script>
 </head>
 <body>
+    <div id="loading" style="font-family: 'Bronxos'; font-size: 50px;">
+	<img style="left: 50%; top: 50%; transform: translate(-50%, -50%); position: absolute" src="images/loading.gif"/>
+	<span style="bottom: 0px; position: absolute; font-family: Bronxos">.</span>
+	<span style="bottom: 0px; position: absolute; font-family: 'Degular'">.</span>
+	<span style="bottom: 0px; position: absolute; font-family: Manrope">.</span>
+    </div>
     
     <div id="header">
 	<a href="#"><img src="images/download_icon.png" alt=""> <span style="padding: 10px">DESACARGA EL INFORME</span></a>
@@ -41,11 +48,6 @@
 	    <li><span>06 / La negaci&oacute;n del presente</span></li>
 	</ul>
     </div>    
-
-
-    <div id="loading" style="font-family: 'Bronxos'; font-size: 50px;">
-	<span style="left: 50%; top: 50%; transform: translate(-50%, -50%); position: absolute">Cargando...</span>
-    </div>
 
     <?php
     include('sections/cover/cover.php');

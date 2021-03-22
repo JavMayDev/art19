@@ -28,7 +28,8 @@ body {
     overflow: hidden;
     width: 100vw;
     height: 100vh;
-    background-image: url(images/bg.png);
+    background: url(images/bg.png) no-repeat center center fixed;
+    background-size: cover;
     font-family: 'Degular';
 }
 
@@ -91,10 +92,10 @@ a {
 }
 
 #menu {
+    padding-left: 0px;
     z-index: 2;
     position: fixed;
     bottom: 20px;
-    right: 20px;
     font-size: 20px;
     list-style: none;
     cursor: pointer;
@@ -110,7 +111,7 @@ a {
 
 #loading {
     width: 100vw;
-    height: 100vh;
+    height: 102vh;
     position: fixed;
     z-index: 10;
     background-color: black;
@@ -176,6 +177,10 @@ a {
     transform: translate(-50%, -50%);
 }
 
+.info {
+    margin-top: 15vh;
+}
+
 .section .info .columns {
     display: flex;
     flex-direction: row;
@@ -208,13 +213,14 @@ a {
     flex-grow: 1;
 }
 .chart > .chartlabel {
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
 }
 .chart > .chartlabel span {
     width: 100%;
     text-align: right;
-    flex-grow: 1;
+    /* flex-grow: 1; */
+    position: absolute;
 }
 
 #nav-icon {
