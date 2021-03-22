@@ -1,4 +1,4 @@
-<div class="section">
+<div class="section" getin="initChart">
     <link rel="stylesheet" href="sections/sec00/sec00.css">
 
     <div class="cover">

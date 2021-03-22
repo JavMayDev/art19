@@ -6,14 +6,14 @@ material.uniforms.uNoiseDistortAmplitude.value = 0;
 material.uniforms.uSineDistortAmplitude.value = 0;
 
 sectionsColors = [
-    '#000',
-    'rgb(141, 175, 181)',
-    'rgb(242, 122, 103)',
-    'rgb(55, 164, 161)',
-    'rgb(157, 29, 66)',
-    'rgb(60, 81, 143)',
-    'rgb(5, 71, 77)',
-    'rgb(61, 23, 80)',
+    { color: '#000', sectionIndex: 0 },
+    { color: 'rgb(141, 175, 181)', sectionIndex: 4  },
+    { color: 'rgb(242, 122, 103)', sectionIndex: 5   },
+    { color: 'rgb(55, 164, 161)', sectionIndex: 6   },
+    { color: 'rgb(157, 29, 66)', sectionIndex: 7   },
+    { color: 'rgb(60, 81, 143)', sectionIndex: 8   },
+    { color: 'rgb(5, 71, 77)' , sectionIndex: 9  },
+    { color: 'rgb(61, 23, 80)', sectionIndex: 10  },
 ];
 
 sections.forEach(function (section, i) {
@@ -25,7 +25,9 @@ sections.forEach(function (section, i) {
             var fill;
             var bg = distor.classList.contains('distor-bg');
             if (bg) fill = 'white';
-            else fill = sectionsColors[i];
+	    else fill = sectionsColors.find(function(c) {
+		if(c.sectionIndex == i) return c
+	    }).color
 
 	    var textSettings = { fill: fill }
 	    if(distor.parentElement.classList.contains('cover-title') )
@@ -45,17 +47,19 @@ sections.forEach(function (section, i) {
             if (bg)
                 distor
                     .getElementsByTagName('canvas')
-                    .item(0).style.backgroundColor = sectionsColors[i];
+		    .item(0).style.backgroundColor = sectionsColors.find(function(c){
+			if(c.sectionIndex == i) return c
+		    }).color
         });
 });
 
-// var prevY = 0;
-// window.onmousemove = function (event) {
-//     var mouseVel = Math.abs(event.clientY - prevY) / 50;
-//     material.uniforms.uNoiseDistortAmplitude.value = mouseVel;
-//     material.uniforms.uSineDistortAmplitude.value = mouseVel;
-//     prevY = event.clientY;
-// };
+var prevY = 0;
+window.onmousemove = function (event) {
+    var mouseVel = Math.abs(event.clientY - prevY) / 50;
+    material.uniforms.uNoiseDistortAmplitude.value = mouseVel;
+    material.uniforms.uSineDistortAmplitude.value = mouseVel;
+    prevY = event.clientY;
+};
 
 function animateMaterial(materialSettings, duration) {
     Object.keys(materialSettings).forEach(function (uniform) {

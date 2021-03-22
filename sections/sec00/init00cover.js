@@ -35,18 +35,21 @@ function initChart() {
         line.setAttribute('stroke-dasharray', barlength);
         line.setAttribute('stroke-dashoffset', barlength);
         line.setAttribute('stroke-width', barStrokeWidth);
-        line.setAttribute('stroke', sectionsColors[currentSection + 1]);
+	line.setAttribute('stroke', sectionsColors.find(function(c){
+	    if(c.sectionIndex == currentSection) return c
+	}).color);
 	line.setAttribute('id', bar.label)
 
         chart00.appendChild(line);
     });
 }
 
-window.addEventListener('load', initChart)
+// window.addEventListener('load', initChart)
 
 function toggleChart () {
     console.log( 'toggleChart' )
     dataset00.forEach(function(bar) {
+	console.log( 'on toggle chart forEach, bar: ', bar )
 	anime({
 	    targets: document.getElementById(bar.label),
 	    strokeDashoffset: 0,

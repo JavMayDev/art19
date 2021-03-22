@@ -11,8 +11,17 @@ function setMenu(target) {
 
     if (target == 0) return;
 
-    liTarget = menu.getElementsByTagName('li').item(target - 1);
-    liTarget.style.backgroundColor = sectionsColors[target];
+    // liTarget = menu.getElementsByTagName('li').item(target - 1);
+    liTarget = Array.from(menu.getElementsByTagName('li')).find(function (li, i) {
+	if(target == menuSectionIndex[i])
+	    return li
+    })
+
+    if(!liTarget) return
+
+    liTarget.style.backgroundColor = sectionsColors.find(function(c) {
+	if(c.sectionIndex == target) return c
+    }).color;
     liTarget.style.color = 'white';
     liTarget.style.fontWeight = 'bold';
 }
@@ -66,6 +75,10 @@ function setCurrent(targetIndex) {
 
         if (currentSection == targetIndex) {
             // init section
+	    console.log( 'target raised' )
+	    console.log( 'function string: ', sections[currentSection].getAttribute('getin') )
+	    console.log( 'window function:', window['initsec03'] )
+	    console.log( 'window function all together:', window[sections[currentSection].getAttribute('getin')] )
             if (window[sections[currentSection].getAttribute('getin')])
                 window[sections[currentSection].getAttribute('getin')]();
 

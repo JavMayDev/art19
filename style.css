@@ -66,6 +66,7 @@ a {
 .section .info {
     padding: 0px 10vw 0px 10vw;
     width: 80vw;
+    overflow-y: scroll;
 }
 
 .section .delay {
@@ -160,15 +161,24 @@ a {
 #fullscreen-menu ul li {
     margin: 15px 0px;
 }
+#fullscreen-menu ul li span {
+    cursor: pointer;
+    padding: 0px 15px;
+}
 
-.section .info .columns {
-    display: flex;
-    flex-direction: row;
+.center {
+    max-height: 80vh;
+    /* overflow-y: scroll; */
     max-width: 1200px;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.section .info .columns {
+    display: flex;
+    flex-direction: row;
 }
 .section .info .columns p {
     text-align: justify;
@@ -181,6 +191,30 @@ a {
 .section .info .columns > div {
     margin: 30px;
     width: 50%;
+}
+
+.section .info .columns > div > img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.chart {
+    display: flex;
+    flex-direction: row;
+}
+.chart > .wrapper {
+    flex-grow: 1;
+}
+.chart > .chartlabel {
+    display: flex;
+    flex-direction: column;
+}
+.chart > .chartlabel span {
+    width: 100%;
+    text-align: right;
+    flex-grow: 1;
 }
 
 #nav-icon {
