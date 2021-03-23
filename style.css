@@ -38,6 +38,14 @@ a {
     color: black;
 }
 
+#art19-logo {
+    position: absolute;
+    bottom: 200px;
+    left: 30vw;
+    font-family: 'Manrope';
+    font-weight: lighter;
+}
+
 .section {
     position: absolute;
     height: 100vh;
@@ -212,15 +220,16 @@ a {
 .chart > .wrapper {
     flex-grow: 1;
 }
-.chart > .chartlabel {
-    /* display: flex; */
-    /* flex-direction: column; */
-}
 .chart > .chartlabel span {
     width: 100%;
     text-align: right;
     /* flex-grow: 1; */
     position: absolute;
+}
+
+.video {
+    width: 80vw;
+    height: 70vh;
 }
 
 #nav-icon {

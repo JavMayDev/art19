@@ -21,7 +21,7 @@
     </div>
     
     <div id="header">
-	<a href="#"><img src="images/download_icon.png" alt=""> <span style="padding: 10px">DESACARGA EL INFORME</span></a>
+	<a href="download_report.php"><img src="images/download_icon.png" alt=""> <span style="padding: 10px">DESCARGA EL INFORME</span></a>
 	<div class="push"></div>
 	<div>
 	    <span>comunicacion@article19.org</span>

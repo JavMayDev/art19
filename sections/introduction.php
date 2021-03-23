@@ -1,9 +1,13 @@
-<div class="section">
+<div class="section" getin="playIntroVideo">
     <div class="cover">
-	<div class="center">
-	    animacion
-	</div>
+	<video id="intro-video" src="intro.mp4" class="video center" controls></video>
     </div>
+    <script>
+	var introVideo = document.getElementById('intro-video')
+	function playIntroVideo () {
+	    introVideo.play()
+	}
+    </script>
 </div>
 
 <div class="section">
@@ -21,8 +25,6 @@
 
 <div class="section">
     <div class="cover">
-	<div class="center">
-	    video
-	</div>
+	<iframe class="center video" src="https://youtube.com/embed/5U754R5rUOE" frameborder="0"></iframe>
     </div>
 </div>

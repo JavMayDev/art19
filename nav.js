@@ -37,7 +37,6 @@ function setCurrentLi () {
 	    return mi
     })
     if(!currentLi) return
-    console.log( 'on setCurrent, match: ', currentLi )
     currentLi.span.style.backgroundColor = 'white'
     currentLi.span.style.color = 'black'
 }

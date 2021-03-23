@@ -1,4 +1,4 @@
-<div class="section" getin="initCover">
+<div class="section">
     <link rel="stylesheet" href="sections/cover/cover.css">
 
     <div class="cover">
@@ -9,7 +9,7 @@
 		data-weight="bold"
 		data-family="'Degular'"
 		class="distor" 
-		>DISOTRSI&Oacute;N:</h1>
+		>DISTORSI&Oacute;N:</h1>
 	    <h2
 		id="title-2"
 		class="distor distor-bg"
@@ -26,13 +26,7 @@
 		>contra la realidad</h2>
 	</div>
 
-	<div style="
-		position: absolute;
-		bottom: 200px;
-		left: 30vw;
-		font-family: 'Manrope';
-		font-weight: lighter;
-	    ">
+	<div id="art19-logo">
 	    <h3>INFORME ANUAL 2020</h3>
 	    <img src="images/logo_black.png" alt="">
 	</div>
